@@ -4,5 +4,8 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import 'stencil-components/dist/stencil-components';
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
