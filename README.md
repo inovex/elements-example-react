@@ -14,6 +14,14 @@ This project demonstrates the usage of [stencil-components](https://gitlab.inove
 
 ## Project setup
 
+To log into the private inovex elements registry, run the following script (username inovex, password inovex)
+
+```bash
+npm set registry https://registry.elements.inovex.io
+npm adduser --registry https://registry.elements.inovex.io
+npm config set always-auth true
+```
+
 Run `yarn install`. The `postinstall`-Script in `package.json` copies the inovex-elements from the `node_modules`-Folder to the public directory. 
 
 > Hint: [Stencil doc](https://stenciljs.com/docs/framework-integration) provides information about integration in react environments.
