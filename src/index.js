@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import 'stencil-components/dist/stencil-components';
+import '@inovex/elements';
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
