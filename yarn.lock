@@ -2,19 +2,21 @@
 # yarn lockfile v1
 
 
-"@inovex/elements@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.elements.inovex.io/@inovex%2felements/-/elements-0.1.1.tgz#af5162bbfd6bbb2c54a17f9183195b4423d93f9d"
+"@inovex/elements@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.elements.inovex.io/@inovex%2felements/-/elements-0.2.0.tgz#8eb47d8e81d72b91c9a7d06d2569179d7a1931fa"
   dependencies:
     "@material/button" "^0.37.0"
     "@material/card" "^0.37.0"
     "@material/checkbox" "^0.37.0"
     "@material/chips" "^0.37.0"
     "@material/form-field" "^0.37.0"
+    "@material/icon-button" "0.39.0-0"
     "@material/radio" "^0.37.0"
-    "@material/select" "^0.37.0"
-    "@material/textfield" "^0.37.0"
-    "@stencil/core" "^0.9.9"
+    "@material/ripple" "^0.38.1"
+    "@material/select" "^0.37.1"
+    "@material/textfield" "^0.38.1"
+    "@stencil/core" "0.11.4"
     classnames "^2.2.6"
     flatpickr "^4.4.6"
     tooltip.js "^1.2.0"
@@ -74,14 +76,23 @@
     "@material/animation" "^0.34.0"
     "@material/theme" "^0.35.0"
 
-"@material/floating-label@^0.36.0":
-  version "0.36.0"
-  resolved "https://registry.elements.inovex.io/@material%2ffloating-label/-/floating-label-0.36.0.tgz#309f50234f42da0151ad6c0a3d1af7dee9172cd2"
+"@material/floating-label@^0.37.1":
+  version "0.37.1"
+  resolved "https://registry.elements.inovex.io/@material%2ffloating-label/-/floating-label-0.37.1.tgz#7251e1a9b2b305b1c8acdb9bf19320825ce1a88d"
   dependencies:
     "@material/base" "^0.35.0"
     "@material/rtl" "^0.36.0"
     "@material/theme" "^0.35.0"
-    "@material/typography" "^0.35.0"
+    "@material/typography" "^0.37.1"
+
+"@material/floating-label@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.elements.inovex.io/@material%2ffloating-label/-/floating-label-0.38.0.tgz#557771f8b9d05d0cd7ec6b3bb13ebb0d24d65ab5"
+  dependencies:
+    "@material/base" "^0.35.0"
+    "@material/rtl" "^0.36.0"
+    "@material/theme" "^0.38.0"
+    "@material/typography" "^0.38.0"
 
 "@material/form-field@^0.37.0":
   version "0.37.0"
@@ -93,6 +104,14 @@
     "@material/theme" "^0.35.0"
     "@material/typography" "^0.35.0"
 
+"@material/icon-button@0.39.0-0":
+  version "0.39.0-0"
+  resolved "https://registry.elements.inovex.io/@material%2ficon-button/-/icon-button-0.39.0-0.tgz#e030364423e0dc1da24d1480555d992b42dfb247"
+  dependencies:
+    "@material/base" "^0.35.0"
+    "@material/ripple" "^0.38.1"
+    "@material/theme" "^0.38.0"
+
 "@material/line-ripple@^0.35.0":
   version "0.35.0"
   resolved "https://registry.elements.inovex.io/@material%2fline-ripple/-/line-ripple-0.35.0.tgz#5975b3c7150057eabb997a9453d48b2979b6a4ff"
@@ -101,13 +120,29 @@
     "@material/base" "^0.35.0"
     "@material/theme" "^0.35.0"
 
-"@material/notched-outline@^0.35.0":
-  version "0.35.0"
-  resolved "https://registry.elements.inovex.io/@material%2fnotched-outline/-/notched-outline-0.35.0.tgz#df821f007ea84bf6d67859a2b7bcf5c44a248911"
+"@material/line-ripple@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.elements.inovex.io/@material%2fline-ripple/-/line-ripple-0.38.0.tgz#e70fec82bfd0b718efcbc72c52210e45bd31bcf9"
+  dependencies:
+    "@material/animation" "^0.34.0"
+    "@material/base" "^0.35.0"
+    "@material/theme" "^0.38.0"
+
+"@material/notched-outline@^0.37.1":
+  version "0.37.1"
+  resolved "https://registry.elements.inovex.io/@material%2fnotched-outline/-/notched-outline-0.37.1.tgz#06a2a5b99410f7f3b4ab4e7a3f1c299754d72c6c"
   dependencies:
     "@material/animation" "^0.34.0"
     "@material/base" "^0.35.0"
     "@material/theme" "^0.35.0"
+
+"@material/notched-outline@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.elements.inovex.io/@material%2fnotched-outline/-/notched-outline-0.38.0.tgz#75ae05a79cdd6a3761d8ddf3afd763c1450c22c8"
+  dependencies:
+    "@material/animation" "^0.34.0"
+    "@material/base" "^0.35.0"
+    "@material/theme" "^0.38.0"
 
 "@material/radio@^0.37.0":
   version "0.37.0"
@@ -127,23 +162,39 @@
     "@material/base" "^0.35.0"
     "@material/theme" "^0.35.0"
 
+"@material/ripple@^0.37.1":
+  version "0.37.1"
+  resolved "https://registry.elements.inovex.io/@material%2fripple/-/ripple-0.37.1.tgz#7bfe43036c2a9066f5083ba2ac5b952d96be16a4"
+  dependencies:
+    "@material/animation" "^0.34.0"
+    "@material/base" "^0.35.0"
+    "@material/theme" "^0.35.0"
+
+"@material/ripple@^0.38.1":
+  version "0.38.1"
+  resolved "https://registry.elements.inovex.io/@material%2fripple/-/ripple-0.38.1.tgz#74e61ed28e7680e0fd990fa50fa1949da456b3cb"
+  dependencies:
+    "@material/animation" "^0.34.0"
+    "@material/base" "^0.35.0"
+    "@material/theme" "^0.38.0"
+
 "@material/rtl@^0.36.0":
   version "0.36.0"
   resolved "https://registry.elements.inovex.io/@material%2frtl/-/rtl-0.36.0.tgz#a81b587981dc6e09f51e26da8a7447f89358ccd5"
 
-"@material/select@^0.37.0":
-  version "0.37.0"
-  resolved "https://registry.elements.inovex.io/@material%2fselect/-/select-0.37.0.tgz#e24b58f9d708cf37b1ee49fa6879a7508dc04cc3"
+"@material/select@^0.37.1":
+  version "0.37.1"
+  resolved "https://registry.elements.inovex.io/@material%2fselect/-/select-0.37.1.tgz#5567c5103a070cbe76214539566f6f5227165910"
   dependencies:
     "@material/animation" "^0.34.0"
     "@material/base" "^0.35.0"
-    "@material/floating-label" "^0.36.0"
+    "@material/floating-label" "^0.37.1"
     "@material/line-ripple" "^0.35.0"
-    "@material/notched-outline" "^0.35.0"
-    "@material/ripple" "^0.37.0"
+    "@material/notched-outline" "^0.37.1"
+    "@material/ripple" "^0.37.1"
     "@material/rtl" "^0.36.0"
     "@material/theme" "^0.35.0"
-    "@material/typography" "^0.35.0"
+    "@material/typography" "^0.37.1"
 
 "@material/selection-control@^0.37.0":
   version "0.37.0"
@@ -151,42 +202,53 @@
   dependencies:
     "@material/ripple" "^0.37.0"
 
-"@material/textfield@^0.37.0":
-  version "0.37.0"
-  resolved "https://registry.elements.inovex.io/@material%2ftextfield/-/textfield-0.37.0.tgz#8288d379f81c3f6f09fde384792afd219bfe116c"
+"@material/textfield@^0.38.1":
+  version "0.38.1"
+  resolved "https://registry.elements.inovex.io/@material%2ftextfield/-/textfield-0.38.1.tgz#f0dc2d7b534a51845a84f71fbd8199b6cc0b5130"
   dependencies:
     "@material/animation" "^0.34.0"
     "@material/base" "^0.35.0"
-    "@material/floating-label" "^0.36.0"
-    "@material/line-ripple" "^0.35.0"
-    "@material/notched-outline" "^0.35.0"
-    "@material/ripple" "^0.37.0"
+    "@material/floating-label" "^0.38.0"
+    "@material/line-ripple" "^0.38.0"
+    "@material/notched-outline" "^0.38.0"
+    "@material/ripple" "^0.38.1"
     "@material/rtl" "^0.36.0"
-    "@material/theme" "^0.35.0"
-    "@material/typography" "^0.35.0"
+    "@material/theme" "^0.38.0"
+    "@material/typography" "^0.38.0"
 
 "@material/theme@^0.35.0":
   version "0.35.0"
   resolved "https://registry.elements.inovex.io/@material%2ftheme/-/theme-0.35.0.tgz#a2c76f60b82a53d399b769ef91ec52e83ad3c3bd"
 
+"@material/theme@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.elements.inovex.io/@material%2ftheme/-/theme-0.38.0.tgz#c1a2247eba4af2ba47da4456921ab420869fda55"
+
 "@material/typography@^0.35.0":
   version "0.35.0"
   resolved "https://registry.elements.inovex.io/@material%2ftypography/-/typography-0.35.0.tgz#23ad7eb7c9789e69c7c3fa54df8fc311cd7fc4b1"
 
-"@stencil/core@^0.9.9":
-  version "0.9.11"
-  resolved "https://registry.elements.inovex.io/@stencil%2fcore/-/core-0.9.11.tgz#e3cd1b87a64f51057f458e53f9388b9a3bf3db7a"
+"@material/typography@^0.37.1":
+  version "0.37.1"
+  resolved "https://registry.elements.inovex.io/@material%2ftypography/-/typography-0.37.1.tgz#2e14e3ee5418a5170d793cdf7b6a671c8896292c"
+
+"@material/typography@^0.38.0":
+  version "0.38.0"
+  resolved "https://registry.elements.inovex.io/@material%2ftypography/-/typography-0.38.0.tgz#fff8e4f25c5ef7b0afb5ed414bc700981e431703"
+
+"@stencil/core@0.11.4":
+  version "0.11.4"
+  resolved "https://registry.elements.inovex.io/@stencil%2fcore/-/core-0.11.4.tgz#3f22afdbea8ff2756005dea906f62d47ab590ff1"
   dependencies:
     chokidar "2.0.3"
-    jsdom "11.5.1"
-    rollup "^0.59.4"
+    jsdom "11.11.0"
+    rollup "0.63.5"
     rollup-plugin-commonjs "9.1.3"
     rollup-plugin-node-builtins "2.1.2"
     rollup-plugin-node-globals "1.2.1"
     rollup-plugin-node-resolve "3.3.0"
     rollup-pluginutils "2.3.0"
     typescript "~2.9.1"
-    uglify-es "3.3.9"
     workbox-build "^3.1.0"
 
 "@types/estree@0.0.39":
@@ -197,9 +259,13 @@
   version "10.5.1"
   resolved "https://registry.elements.inovex.io/@types%2fnode/-/node-10.5.1.tgz#d578446f4abff5c0b49ade9b4e5274f6badaadfc"
 
-abab@^1.0.3:
+abab@^1.0.3, abab@^1.0.4:
   version "1.0.4"
   resolved "https://registry.elements.inovex.io/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
+
+abab@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.elements.inovex.io/abab/-/abab-2.0.0.tgz#aba0ab4c5eee2d4c79d3487d85450fb2376ebb0f"
 
 abbrev@1:
   version "1.1.1"
@@ -230,7 +296,7 @@ acorn-globals@^3.1.0:
   dependencies:
     acorn "^4.0.4"
 
-acorn-globals@^4.0.0:
+acorn-globals@^4.1.0:
   version "4.1.0"
   resolved "https://registry.elements.inovex.io/acorn-globals/-/acorn-globals-4.1.0.tgz#ab716025dbe17c54d3ef81d32ece2b2d99fe2538"
   dependencies:
@@ -250,9 +316,13 @@ acorn@^4.0.3, acorn@^4.0.4:
   version "4.0.13"
   resolved "https://registry.elements.inovex.io/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
-acorn@^5.0.0, acorn@^5.1.2, acorn@^5.5.0:
+acorn@^5.0.0, acorn@^5.5.0:
   version "5.7.1"
   resolved "https://registry.elements.inovex.io/acorn/-/acorn-5.7.1.tgz#f095829297706a7c9776958c0afc8930a9b9d9d8"
+
+acorn@^5.3.0:
+  version "5.7.2"
+  resolved "https://registry.elements.inovex.io/acorn/-/acorn-5.7.2.tgz#91fa871883485d06708800318404e72bfb26dcc5"
 
 address@1.0.3, address@^1.0.1:
   version "1.0.3"
@@ -492,6 +562,10 @@ ast-types-flow@0.0.7:
 async-each@^1.0.0:
   version "1.0.1"
   resolved "https://registry.elements.inovex.io/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
+
+async-limiter@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.elements.inovex.io/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
 
 async@^1.4.0, async@^1.5.2:
   version "1.5.2"
@@ -1796,10 +1870,6 @@ commander@2.16.x, commander@^2.11.0, commander@~2.16.0:
   version "2.16.0"
   resolved "https://registry.elements.inovex.io/commander/-/commander-2.16.0.tgz#f16390593996ceb4f3eeb020b31d78528f7f8a50"
 
-commander@~2.13.0:
-  version "2.13.0"
-  resolved "https://registry.elements.inovex.io/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
-
 common-tags@^1.4.0:
   version "1.8.0"
   resolved "https://registry.elements.inovex.io/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
@@ -2096,6 +2166,12 @@ cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   dependencies:
     cssom "0.3.x"
 
+"cssstyle@>= 0.3.1 < 0.4.0":
+  version "0.3.1"
+  resolved "https://registry.elements.inovex.io/cssstyle/-/cssstyle-0.3.1.tgz#6da9b4cff1bc5d716e6e5fe8e04fcb1b50a49adf"
+  dependencies:
+    cssom "0.3.x"
+
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.elements.inovex.io/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -2117,6 +2193,14 @@ dashdash@^1.12.0:
   resolved "https://registry.elements.inovex.io/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
   dependencies:
     assert-plus "^1.0.0"
+
+data-urls@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.elements.inovex.io/data-urls/-/data-urls-1.0.1.tgz#d416ac3896918f29ca84d81085bc3705834da579"
+  dependencies:
+    abab "^2.0.0"
+    whatwg-mimetype "^2.1.0"
+    whatwg-url "^7.0.0"
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -3453,7 +3537,7 @@ html-comment-regex@^1.1.0:
   version "1.1.1"
   resolved "https://registry.elements.inovex.io/html-comment-regex/-/html-comment-regex-1.1.1.tgz#668b93776eaae55ebde8f3ad464b307a4963625e"
 
-html-encoding-sniffer@^1.0.1:
+html-encoding-sniffer@^1.0.1, html-encoding-sniffer@^1.0.2:
   version "1.0.2"
   resolved "https://registry.elements.inovex.io/html-encoding-sniffer/-/html-encoding-sniffer-1.0.2.tgz#e70d84b94da53aa375e11fe3a351be6642ca46f8"
   dependencies:
@@ -3554,7 +3638,7 @@ iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://registry.elements.inovex.io/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
-iconv-lite@^0.4.17, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
+iconv-lite@0.4.23, iconv-lite@^0.4.17, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   version "0.4.23"
   resolved "https://registry.elements.inovex.io/iconv-lite/-/iconv-lite-0.4.23.tgz#297871f63be507adcfbfca715d0cd0eed84e9a63"
   dependencies:
@@ -4322,34 +4406,36 @@ jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.elements.inovex.io/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
 
-jsdom@11.5.1:
-  version "11.5.1"
-  resolved "https://registry.elements.inovex.io/jsdom/-/jsdom-11.5.1.tgz#5df753b8d0bca20142ce21f4f6c039f99a992929"
+jsdom@11.11.0:
+  version "11.11.0"
+  resolved "https://registry.elements.inovex.io/jsdom/-/jsdom-11.11.0.tgz#df486efad41aee96c59ad7a190e2449c7eb1110e"
   dependencies:
-    abab "^1.0.3"
-    acorn "^5.1.2"
-    acorn-globals "^4.0.0"
+    abab "^1.0.4"
+    acorn "^5.3.0"
+    acorn-globals "^4.1.0"
     array-equal "^1.0.0"
-    browser-process-hrtime "^0.1.2"
-    content-type-parser "^1.0.1"
     cssom ">= 0.3.2 < 0.4.0"
-    cssstyle ">= 0.2.37 < 0.3.0"
+    cssstyle ">= 0.3.1 < 0.4.0"
+    data-urls "^1.0.0"
     domexception "^1.0.0"
     escodegen "^1.9.0"
-    html-encoding-sniffer "^1.0.1"
+    html-encoding-sniffer "^1.0.2"
     left-pad "^1.2.0"
-    nwmatcher "^1.4.3"
-    parse5 "^3.0.2"
-    pn "^1.0.0"
+    nwsapi "^2.0.0"
+    parse5 "4.0.0"
+    pn "^1.1.0"
     request "^2.83.0"
-    request-promise-native "^1.0.3"
-    sax "^1.2.1"
-    symbol-tree "^3.2.1"
+    request-promise-native "^1.0.5"
+    sax "^1.2.4"
+    symbol-tree "^3.2.2"
     tough-cookie "^2.3.3"
+    w3c-hr-time "^1.0.1"
     webidl-conversions "^4.0.2"
-    whatwg-encoding "^1.0.1"
-    whatwg-url "^6.3.0"
-    xml-name-validator "^2.0.1"
+    whatwg-encoding "^1.0.3"
+    whatwg-mimetype "^2.1.0"
+    whatwg-url "^6.4.1"
+    ws "^4.0.0"
+    xml-name-validator "^3.0.0"
 
 jsdom@^9.12.0:
   version "9.12.0"
@@ -5167,9 +5253,13 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.elements.inovex.io/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-"nwmatcher@>= 1.3.9 < 2.0.0", nwmatcher@^1.4.3:
+"nwmatcher@>= 1.3.9 < 2.0.0":
   version "1.4.4"
   resolved "https://registry.elements.inovex.io/nwmatcher/-/nwmatcher-1.4.4.tgz#2285631f34a95f0d0395cd900c96ed39b58f346e"
+
+nwsapi@^2.0.0:
+  version "2.0.8"
+  resolved "https://registry.elements.inovex.io/nwsapi/-/nwsapi-2.0.8.tgz#e3603579b7e162b3dbedae4fb24e46f771d8fa24"
 
 oauth-sign@~0.8.2:
   version "0.8.2"
@@ -5397,15 +5487,13 @@ parse-passwd@^1.0.0:
   version "1.0.0"
   resolved "https://registry.elements.inovex.io/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
 
+parse5@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.elements.inovex.io/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
+
 parse5@^1.5.1:
   version "1.5.1"
   resolved "https://registry.elements.inovex.io/parse5/-/parse5-1.5.1.tgz#9b7f3b0de32be78dc2401b17573ccaf0f6f59d94"
-
-parse5@^3.0.2:
-  version "3.0.3"
-  resolved "https://registry.elements.inovex.io/parse5/-/parse5-3.0.3.tgz#042f792ffdd36851551cf4e9e066b3874ab45b5c"
-  dependencies:
-    "@types/node" "*"
 
 parseurl@~1.3.2:
   version "1.3.2"
@@ -5521,7 +5609,7 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.elements.inovex.io/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-pn@^1.0.0:
+pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.elements.inovex.io/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
@@ -6317,7 +6405,7 @@ request-promise-core@1.1.1:
   dependencies:
     lodash "^4.13.1"
 
-request-promise-native@^1.0.3:
+request-promise-native@^1.0.5:
   version "1.0.5"
   resolved "https://registry.elements.inovex.io/request-promise-native/-/request-promise-native-1.0.5.tgz#5281770f68e0c9719e5163fd3fab482215f4fda5"
   dependencies:
@@ -6488,9 +6576,9 @@ rollup-pluginutils@2.3.0, rollup-pluginutils@^2.0.1:
     estree-walker "^0.5.2"
     micromatch "^2.3.11"
 
-rollup@^0.59.4:
-  version "0.59.4"
-  resolved "https://registry.elements.inovex.io/rollup/-/rollup-0.59.4.tgz#6f80f7017c22667ff1bf3e62adf8624a44cc44aa"
+rollup@0.63.5:
+  version "0.63.5"
+  resolved "https://registry.elements.inovex.io/rollup/-/rollup-0.63.5.tgz#5543eecac9a1b83b7e1be598b5be84c9c0a089db"
   dependencies:
     "@types/estree" "0.0.39"
     "@types/node" "*"
@@ -7041,7 +7129,7 @@ sw-toolbox@^3.4.0:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
 
-symbol-tree@^3.2.1:
+symbol-tree@^3.2.1, symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "https://registry.elements.inovex.io/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
 
@@ -7247,13 +7335,6 @@ typescript@~2.9.1:
 ua-parser-js@^0.7.18:
   version "0.7.18"
   resolved "https://registry.elements.inovex.io/ua-parser-js/-/ua-parser-js-0.7.18.tgz#a7bfd92f56edfb117083b69e31d2aa8882d4b1ed"
-
-uglify-es@3.3.9:
-  version "3.3.9"
-  resolved "https://registry.elements.inovex.io/uglify-es/-/uglify-es-3.3.9.tgz#0c1c4f0700bed8dbc124cdb304d2592ca203e677"
-  dependencies:
-    commander "~2.13.0"
-    source-map "~0.6.1"
 
 uglify-js@3.4.x, uglify-js@^3.0.13:
   version "3.4.3"
@@ -7465,6 +7546,12 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+w3c-hr-time@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.elements.inovex.io/w3c-hr-time/-/w3c-hr-time-1.0.1.tgz#82ac2bff63d950ea9e3189a58a65625fedf19045"
+  dependencies:
+    browser-process-hrtime "^0.1.2"
+
 walker@~1.0.5:
   version "1.0.7"
   resolved "https://registry.elements.inovex.io/walker/-/walker-1.0.7.tgz#2f7f9b8fd10d677262b18a884e28d19618e028fb"
@@ -7597,6 +7684,12 @@ whatwg-encoding@^1.0.1:
   dependencies:
     iconv-lite "0.4.19"
 
+whatwg-encoding@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.elements.inovex.io/whatwg-encoding/-/whatwg-encoding-1.0.4.tgz#63fb016b7435b795d9025632c086a5209dbd2621"
+  dependencies:
+    iconv-lite "0.4.23"
+
 whatwg-fetch@2.0.3:
   version "2.0.3"
   resolved "https://registry.elements.inovex.io/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
@@ -7605,6 +7698,10 @@ whatwg-fetch@>=0.10.0:
   version "2.0.4"
   resolved "https://registry.elements.inovex.io/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
 
+whatwg-mimetype@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.elements.inovex.io/whatwg-mimetype/-/whatwg-mimetype-2.1.0.tgz#f0f21d76cbba72362eb609dbed2a30cd17fcc7d4"
+
 whatwg-url@^4.3.0:
   version "4.8.0"
   resolved "https://registry.elements.inovex.io/whatwg-url/-/whatwg-url-4.8.0.tgz#d2981aa9148c1e00a41c5a6131166ab4683bbcc0"
@@ -7612,9 +7709,17 @@ whatwg-url@^4.3.0:
     tr46 "~0.0.3"
     webidl-conversions "^3.0.0"
 
-whatwg-url@^6.3.0:
+whatwg-url@^6.4.1:
   version "6.5.0"
   resolved "https://registry.elements.inovex.io/whatwg-url/-/whatwg-url-6.5.0.tgz#f2df02bff176fd65070df74ad5ccbb5a199965a8"
+  dependencies:
+    lodash.sortby "^4.7.0"
+    tr46 "^1.0.1"
+    webidl-conversions "^4.0.2"
+
+whatwg-url@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.elements.inovex.io/whatwg-url/-/whatwg-url-7.0.0.tgz#fde926fa54a599f3adf82dff25a9f7be02dc6edd"
   dependencies:
     lodash.sortby "^4.7.0"
     tr46 "^1.0.1"
@@ -7792,6 +7897,13 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
+ws@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.elements.inovex.io/ws/-/ws-4.1.0.tgz#a979b5d7d4da68bf54efe0408967c324869a7289"
+  dependencies:
+    async-limiter "~1.0.0"
+    safe-buffer "~5.1.0"
+
 xdg-basedir@^3.0.0:
   version "3.0.0"
   resolved "https://registry.elements.inovex.io/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
@@ -7799,6 +7911,10 @@ xdg-basedir@^3.0.0:
 xml-name-validator@^2.0.1:
   version "2.0.1"
   resolved "https://registry.elements.inovex.io/xml-name-validator/-/xml-name-validator-2.0.1.tgz#4d8b8f1eccd3419aa362061becef515e1e559635"
+
+xml-name-validator@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.elements.inovex.io/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
 
 xtend@^2.2.0:
   version "2.2.0"

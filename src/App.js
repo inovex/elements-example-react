@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import { InoButton } from '@inovex/elements/dist/react/InoButton';
+import { InoInput } from '@inovex/elements/dist/react/InoInput';
 
 export class Todo {
   constructor(name) {
@@ -40,12 +42,12 @@ class App extends Component {
   todoActionTemplate() {
     return (
       <div className="action-box">
-        <ino-input 
+        <InoInput
           type="text" 
           value={this.state.newTodoName} 
           onKeyUp={(ev) => this.onValueChanged(ev.target.value)} 
-          placeholder="What needs to be done..."></ino-input>
-        <ino-button onClick={(ev) => this.add(ev)} icon-right="question">Add</ino-button>
+          placeholder="What needs to be done..."></InoInput>
+        <InoButton onClick={(ev) => this.add(ev)} icon-right="add">Add</InoButton>
       </div>
     );
   }
@@ -57,7 +59,7 @@ class App extends Component {
         { this.state.todos.map((todo, index) => {
             return <li key={index}>
               {todo.name} 
-              <ino-button onClick={() => this.delete(index, todo)}>Delete</ino-button>
+              <InoButton onClick={() => this.delete(index, todo)}>Delete</InoButton>
             </li>;
           })
         }
