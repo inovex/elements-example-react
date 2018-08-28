@@ -1,15 +1,6 @@
-# Stencil in React
+# Example Inovex Elements React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-
-## Integration of inovex-elements (stencil components)
-
-This project demonstrates the usage of [stencil-components](https://gitlab.inovex.de/inovex-elements/stencil-components) in React. Since the components are currently not published to npm, it is recommended to use npm linking to integrate them:
-
-1. Make sure that you already ran `npm link` in the directory of [stencil-components](https://gitlab.inovex.de/inovex-elements/stencil-components).
-
-2. Afterwards, run in this project and `npm link stencil-components` to link the components to this project.
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and demonstrates the usage of [inovex-elements](https://gitlab.inovex.de/inovex-elements/core) in React. 
 
 
 ## Project setup
@@ -22,11 +13,16 @@ npm adduser --registry https://registry.elements.inovex.io
 npm config set always-auth true
 ```
 
-Run `yarn install`. The `postinstall`-Script in `package.json` copies the inovex-elements from the `node_modules`-Folder to the public directory. 
+Run `yarn install`.
 
-> Hint: [Stencil doc](https://stenciljs.com/docs/framework-integration) provides information about integration in react environments.
+> Hint: [Stencil doc](https://stenciljs.com/docs/framework-integration) provides more details about integrations in react environments.
 
-> Hint: In this simple configuration, whenever you want to integrate a new version of `stencil-components`, run `yarn install` again to copy the web components again.
+## Development
+In case you work on a non published state of invox elements and you want to test them in this project, we commend a local linking.
+
+1. Make sure that you run `yarn link` in the local directory of the inovex elements (`core`)
+
+2. Afterwards, in this project, run `npm link @inovex/elements` to link the components to this project.
 
 
 ## Available Scripts
