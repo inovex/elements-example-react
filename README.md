@@ -8,8 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 To log into the private inovex elements registry, run the following script (username inovex, password inovex)
 
 ```bash
-npm set registry https://registry.elements.inovex.io
-npm adduser --registry https://registry.elements.inovex.io
+npm adduser --registry https://registry.elements.inovex.io --scope=@inovex
 npm config set always-auth true
 ```
 
