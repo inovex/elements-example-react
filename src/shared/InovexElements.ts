@@ -26,4 +26,4 @@ export {
   InoTabBar,
   InoTextarea,
   InoTooltip
-} from '@inovex/elements/dist/react';
+} from '@inovex/elements-react/';
