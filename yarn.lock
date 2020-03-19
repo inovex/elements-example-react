@@ -936,17 +936,17 @@
   dependencies:
     "@hapi/hoek" "6.x.x"
 
-"@inovex/elements-react@^0.10.1":
-  version "0.10.1"
-  resolved "https://artifactory.inovex.de/artifactory/api/npm/internal-npm/@inovex/elements-react/-/@inovex/elements-react-0.10.1.tgz#eae6bdff9f7105d099b3dd2586c4c1500b1193ba"
-  integrity sha1-6ua9/59xBdCZs90lhsTBUAsRk7o=
+"@inovex/elements-react@^0.14.0":
+  version "0.14.0"
+  resolved "https://artifactory.inovex.de/artifactory/api/npm/internal-npm/@inovex/elements-react/-/@inovex/elements-react-0.14.0.tgz#a69d9534e1cdcde420d5c290f5b1dabedc13b88b"
+  integrity sha1-pp2VNOHNzeQg1cKQ9bHavtwTuIs=
   dependencies:
-    "@inovex/elements" "^0.10.1"
+    "@inovex/elements" "^0.14.0"
 
-"@inovex/elements@^0.10.1":
-  version "0.10.1"
-  resolved "https://artifactory.inovex.de/artifactory/api/npm/internal-npm/@inovex/elements/-/@inovex/elements-0.10.1.tgz#83d31aae840ab4ddb9ae445461f43b6f91cf477e"
-  integrity sha1-g9MaroQKtN25rkRUYfQ7b5HPR34=
+"@inovex/elements@^0.14.0":
+  version "0.14.0"
+  resolved "https://artifactory.inovex.de/artifactory/api/npm/internal-npm/@inovex/elements/-/@inovex/elements-0.14.0.tgz#fa03e7fd154bc88513f030999f66f7f692869cbb"
+  integrity sha1-+gPn/RVLyIUT8DCZn2b39pKGnLs=
   dependencies:
     "@material/button" "^3.0.0"
     "@material/card" "^3.0.0"
@@ -962,6 +962,7 @@
     "@material/select" "^3.0.0"
     "@material/slider" "^3.0.0"
     "@material/snackbar" "^3.0.0"
+    "@material/switch" "^3.0.0"
     "@material/tab" "^3.0.0"
     "@material/tab-bar" "^3.0.0"
     "@material/tab-indicator" "^3.0.0"
@@ -971,6 +972,7 @@
     "@stencil/core" "1.4.0"
     autosize "^4.0.2"
     classnames "^2.2.6"
+    currency.js "^1.2.2"
     flatpickr "^4.4.6"
     highlightjs "^9.10.0"
     tooltip.js "^1.3.2"
@@ -1433,6 +1435,21 @@
     "@material/shape" "^3.1.0"
     "@material/theme" "^3.1.0"
     "@material/typography" "^3.1.0"
+    tslib "^1.9.3"
+
+"@material/switch@^3.0.0":
+  version "3.2.0"
+  resolved "https://registry.npmjs.org/@material/switch/-/switch-3.2.0.tgz#003409a8eecfd2f9c9600bfb23e152bf12b7e518"
+  integrity sha512-gECImbvf3HGpmc/Sj2Meq+z7/ri5jmD5rKOeUUeC6nZ77/HiGCRhmSD66rlS0SH5qUUj0mWSbE8ZVOJmVWySEQ==
+  dependencies:
+    "@material/animation" "^3.1.0"
+    "@material/base" "^3.1.0"
+    "@material/dom" "^3.1.0"
+    "@material/elevation" "^3.1.0"
+    "@material/feature-targeting" "^3.1.0"
+    "@material/ripple" "^3.2.0"
+    "@material/rtl" "^3.2.0"
+    "@material/theme" "^3.1.0"
     tslib "^1.9.3"
 
 "@material/tab-bar@^3.0.0":
@@ -3509,6 +3526,11 @@ csstype@^2.2.0:
   version "2.6.4"
   resolved "https://artifactory.inovex.de/artifactory/api/npm/internal-npm/csstype/-/csstype-2.6.4.tgz#d585a6062096e324e7187f80e04f92bd0f00e37f"
   integrity sha1-1YWmBiCW4yTnGH+A4E+SvQ8A438=
+
+currency.js@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/currency.js/-/currency.js-1.2.2.tgz#ae84daf68798051097ad3feb2d022ad08994f526"
+  integrity sha512-trMkXtHpIFq2P+PcSml3La/jpwo8shy2Xn/b5mBXoJhx3E4m3wBbdjS8eHy/DWgYKaEUH8EXPC6yomFx+zumww==
 
 cyclist@~0.2.2:
   version "0.2.2"

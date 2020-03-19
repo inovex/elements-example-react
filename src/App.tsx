@@ -1,85 +1,91 @@
 import React from 'react';
-import logo from './logo.svg';
-// example import Icon
-import { ReactComponent as AddIcon } from '@inovex/elements/dist/inovex-elements/icon-assets/SVG/add.svg';
-import { InoButton, InoDatepicker, InoInput } from './shared/InovexElements';
 import './App.css';
+import { InoCheckbox, InoIcon, InoInput, InoList, InoListDivider, InoListItem } from './shared/InovexElements';
 
 const App: React.FC = () => {
-  const [newTodoName, setTodoName] = React.useState('Initial value');
-  const [todos, setTodos] = React.useState(['Todo1', 'Todo2', 'Todo3']);
+
+  const [newTodoName, setTodoName] = React.useState('');
+
+  const [todos, setTodos] = React.useState<string[]>([]);
+  const [doneTodos, setDoneTodos] = React.useState<string[]>([]);
+
 
   const onValueChanged = (value: CustomEvent<string>) => {
     setTodoName(value.detail);
   };
 
   const addTodo = () => {
-    setTodos([...todos, newTodoName]);
-    setTodoName('');
+    if (newTodoName && newTodoName.length !== 0) {
+      setTodos([...todos, newTodoName]);
+      setTodoName('');
+    }
   };
 
-  const deleteTodo = (index: number, todo: string) => {
+  const doTodo = (todo: string) => {
     const filteredTodos = todos.filter(currentTodo => currentTodo !== todo);
-    setTodos([...filteredTodos]);
+    setTodos(filteredTodos);
+    setDoneTodos([...doneTodos, todo]);
   };
 
-  const todoActionTemplate = () => {
-    return (
-      <div className="action-box">
-        <InoInput
-          type="text"
-          value={newTodoName}
-          onValueChange={value => onValueChanged(value)}
-          placeholder="What needs to be done..."
-        />
-        <InoButton onClick={(ev: any) => addTodo()} icon-right="add">
-          Add
-        </InoButton>
-      </div>
-    );
+  const undoTodo = (todo: string) => {
+    const filteredDoneTodo = doneTodos.filter(currentTodo => currentTodo !== todo);
+    setTodos([...todos, todo]);
+    setDoneTodos(filteredDoneTodo);
   };
 
-  const todoListTemplate = () => {
-    return (
-      <ul className="todos">
-        {todos.map((todo, index) => {
-          return (
-            <li key={index}>
-              {todo}
+  const todoListTemplate = () => (
+    <InoList>
+      {todos.map(todo => (
+          <InoListItem key={todo} inoText={todo}>
+            <InoCheckbox slot="ino-leading" onCheckedChange={() => doTodo(todo)}/>
+          </InoListItem>
+        )
+      )}
+    </InoList>
+  );
 
-              <InoButton onClick={() => deleteTodo(index, todo)}>
-                Delete
-              </InoButton>
-            </li>
-          );
-        })}
-      </ul>
+  const doneListTemplate = () => (
+    <InoList>
+      {doneTodos.map(todo => (
+          <InoListItem key={todo} inoText={todo}>
+            <InoCheckbox slot="ino-leading" checked onCheckedChange={() => undoTodo(todo)}/>
+          </InoListItem>
+        )
+      )}
+    </InoList>
+  );
+
+  const listTemplate = () => {
+    return (
+      <>
+        <InoList>
+          {todoListTemplate()}
+          <InoListDivider inoBetweenLists/>
+          {doneListTemplate()}
+        </InoList>
+      </>
     );
   };
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <InoDatepicker />
-        <InoButton>
-          <AddIcon style={{ fill: 'red' }} /> Add
-        </InoButton>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <h1>Todo test</h1>
-      {todoActionTemplate()}
-      {todoListTemplate()}
+      <h2>inovex elements Todo-List</h2>
+      <InoInput
+        type="text"
+        value={newTodoName}
+        onValueChange={value => onValueChanged(value)}
+        placeholder="What needs to be done..."
+        inoIconTrailing
+        onKeyPress={e => e.key === 'Enter' && addTodo()}
+      >
+        <InoIcon
+          inoIcon={'add'}
+          slot={'ino-icon-trailing'}
+          inoClickable
+          onClick={() => addTodo()}
+        />
+      </InoInput>
+      {listTemplate()}
     </div>
   );
 };
