@@ -29,4 +29,4 @@ export {
   InoTabBar,
   InoTextarea,
   InoTooltip
-} from '@inovex/elements-react/';
+} from '@inovex.de/elements-react/';
