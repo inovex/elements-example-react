@@ -28,5 +28,10 @@ export {
   InoTab,
   InoTabBar,
   InoTextarea,
-  InoTooltip
+  InoTooltip,
+  InoOption,
+  InoDialog,
+  InoSidebar,
+  InoNavItem,
+  InoNavDrawer,
 } from '@inovex.de/elements-react/';

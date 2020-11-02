@@ -3,26 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@inovex.de/elements-react": "^1.1.0",
-    "@types/jest": "^24.0.13",
-    "@types/node": "^12.0.2",
-    "@types/react": "^16.8.18",
-    "@types/react-dom": "^16.8.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "typescript": "^3.4.5"
+    "@inovex.de/elements-react": "^2.0.0",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-router-dom": "^5.1.6",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "typescript": "^4.0.5"
   },
   "peerDependencies": {
-    "typescript": "^3.2.1",
     "react-router": "4.3.1",
-    "react-router-dom": "4.3.1"
+    "react-router-dom": "4.3.1",
+    "typescript": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "link:elements": "yalc add --link @inovex.de/elements-react && yarn",
+    "unlink:elements": "yalc remove @inovex.de/elements-react && yarn"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,92 +1,81 @@
 import React from 'react';
-import './App.css';
-import { InoCheckbox, InoIcon, InoInput, InoList, InoListDivider, InoListItem } from './shared/InovexElements';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from 'react-router-dom';
+import './index.scss';
+
+import { InoList, InoNavItem, InoNavDrawer } from './shared/InovexElements';
+
+import { HomeTodoApp } from './home-todo-app';
+import { Dialog } from './ino-dialog';
+import { Select } from './ino-select';
+
+const NavItemLink = ({
+  label,
+  to,
+}: {
+  label: string;
+  to: string;
+  activeOnlyWhenExact?: boolean;
+}) => {
+  return (
+    <div>
+      <Link className={'router-link'} to={to}>
+        <InoNavItem inoText={label}></InoNavItem>
+      </Link>
+    </div>
+  );
+};
 
 const App: React.FC = () => {
-
-  const [newTodoName, setTodoName] = React.useState('');
-
-  const [todos, setTodos] = React.useState<string[]>([]);
-  const [doneTodos, setDoneTodos] = React.useState<string[]>([]);
-
-
-  const onValueChanged = (value: CustomEvent<string>) => {
-    setTodoName(value.detail);
-  };
-
-  const addTodo = () => {
-    if (newTodoName && newTodoName.length !== 0) {
-      setTodos([...todos, newTodoName]);
-      setTodoName('');
-    }
-  };
-
-  const doTodo = (todo: string) => {
-    const filteredTodos = todos.filter(currentTodo => currentTodo !== todo);
-    setTodos(filteredTodos);
-    setDoneTodos([...doneTodos, todo]);
-  };
-
-  const undoTodo = (todo: string) => {
-    const filteredDoneTodo = doneTodos.filter(currentTodo => currentTodo !== todo);
-    setTodos([...todos, todo]);
-    setDoneTodos(filteredDoneTodo);
-  };
-
-  const todoListTemplate = () => (
-    <InoList>
-      {todos.map(todo => (
-          <InoListItem key={todo} inoText={todo}>
-            <InoCheckbox slot="ino-leading" onCheckedChange={() => doTodo(todo)}/>
-          </InoListItem>
-        )
-      )}
-    </InoList>
-  );
-
-  const doneListTemplate = () => (
-    <InoList>
-      {doneTodos.map(todo => (
-          <InoListItem key={todo} inoText={todo}>
-            <InoCheckbox slot="ino-leading" checked onCheckedChange={() => undoTodo(todo)}/>
-          </InoListItem>
-        )
-      )}
-    </InoList>
-  );
-
-  const listTemplate = () => {
-    return (
-      <>
-        <InoList>
-          {todoListTemplate()}
-          <InoListDivider inoBetweenLists/>
-          {doneListTemplate()}
-        </InoList>
-      </>
-    );
-  };
-
+  const [navOpen, setNavOpen] = React.useState(true);
   return (
-    <div className="App">
-      <h2>inovex elements Todo-List</h2>
-      <InoInput
-        type="text"
-        value={newTodoName}
-        onValueChange={value => onValueChanged(value)}
-        placeholder="What needs to be done..."
-        inoIconTrailing
-        onKeyPress={e => e.key === 'Enter' && addTodo()}
+    <Router>
+      <InoNavDrawer
+        inoOpen={navOpen}
+        inoAnchor="left"
+        inoVariant="docked"
+        onOpenChange={(event) => {
+          setNavOpen(event.detail);
+        }}
       >
-        <InoIcon
-          inoIcon={'add'}
-          slot={'ino-icon-trailing'}
-          inoClickable
-          onClick={() => addTodo()}
-        />
-      </InoInput>
-      {listTemplate()}
-    </div>
+        <InoList slot="header">
+          <img
+            height={'50'}
+            alt="react-icon"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1920px-React-icon.svg.png"
+          />
+
+          <h2>inovex elements</h2>
+          <span>React examples</span>
+        </InoList>
+        <InoList slot="content">
+          <NavItemLink to="/home" label="TodoApp"></NavItemLink>
+          <NavItemLink to="/ino-select" label="InoSelect"></NavItemLink>
+          <NavItemLink to="/ino-dialog" label="InoDialog"></NavItemLink>
+        </InoList>
+        <main slot="app">
+          <Switch>
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
+            <Route path="/home">
+              <HomeTodoApp />
+            </Route>
+            <Route path="/ino-dialog">
+              <Dialog />
+            </Route>
+            <Route path="/ino-select">
+              <Select />
+            </Route>
+          </Switch>
+        </main>
+      </InoNavDrawer>
+    </Router>
   );
 };
 
