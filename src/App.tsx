@@ -5,10 +5,17 @@ import {
   Route,
   Link,
   Redirect,
+  useRouteMatch,
 } from 'react-router-dom';
 import './index.scss';
+import logo from './logo.svg';
 
-import { InoList, InoNavItem, InoNavDrawer } from './shared/InovexElements';
+import {
+  InoList,
+  InoNavItem,
+  InoNavDrawer,
+  InoIcon,
+} from './shared/InovexElements';
 
 import { HomeTodoApp } from './home-todo-app';
 import { Dialog } from './ino-dialog';
@@ -17,17 +24,23 @@ import { Select } from './ino-select';
 const NavItemLink = ({
   label,
   to,
+  activeOnlyWhenExact = true,
 }: {
   label: string;
   to: string;
   activeOnlyWhenExact?: boolean;
 }) => {
+  let match = useRouteMatch({
+    path: to,
+    exact: activeOnlyWhenExact,
+  });
   return (
-    <div>
-      <Link className={'router-link'} to={to}>
-        <InoNavItem inoText={label}></InoNavItem>
-      </Link>
-    </div>
+    <Link className={'router-link'} to={to}>
+      <InoNavItem inoActivated={match ? true : false} inoText={label}>
+        {/* for now just use an empty icon to avoid jumping content issue */}
+        <InoIcon inoIcon=""></InoIcon>
+      </InoNavItem>
+    </Link>
   );
 };
 
@@ -44,12 +57,7 @@ const App: React.FC = () => {
         }}
       >
         <InoList slot="header">
-          <img
-            height={'50'}
-            alt="react-icon"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1920px-React-icon.svg.png"
-          />
-
+          <img height={'50'} alt="react-icon" src={logo} />
           <h2>inovex elements</h2>
           <span>React examples</span>
         </InoList>
