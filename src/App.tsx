@@ -36,7 +36,7 @@ const NavItemLink = ({
   });
   return (
     <Link className={'router-link'} to={to}>
-      <InoNavItem inoActivated={match ? true : false} inoText={label}>
+      <InoNavItem inoActivated={Boolean(match)} inoText={label}>
         {/* for now just use an empty icon to avoid jumping content issue */}
         <InoIcon inoIcon=""></InoIcon>
       </InoNavItem>
