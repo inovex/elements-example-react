@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Edit inovex-elements](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/inovex/elements-example-react/tree/master/?fontsize=14&hidenavigation=1&theme=dark)
+
 ## Available Scripts
 
 In the project directory, you can run:
