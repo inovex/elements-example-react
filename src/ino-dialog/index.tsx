@@ -58,4 +58,5 @@ export const Dialog: React.FC = () => {
     </div>
   );
 };
+
 ReactDOM.render(<Dialog />, document.getElementById('root'));
