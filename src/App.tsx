@@ -21,6 +21,7 @@ import { HomeTodoApp } from './home-todo-app';
 import { Dialog } from './ino-dialog';
 import { Select } from './ino-select';
 import { Fab } from './ino-fab';
+import { ChipSet } from './ino-chip-set';
 
 const NavItemLink = ({
   label,
@@ -67,6 +68,7 @@ const App: React.FC = () => {
           <NavItemLink to="/ino-select" label="InoSelect"></NavItemLink>
           <NavItemLink to="/ino-dialog" label="InoDialog"></NavItemLink>
           <NavItemLink to="/ino-fab" label="InoFab"></NavItemLink>
+          <NavItemLink to="/ino-chip-set" label="InoChipSet"></NavItemLink>
         </InoList>
         <main slot="app">
           <Switch>
@@ -84,6 +86,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/ino-fab">
               <Fab />
+            </Route>
+            <Route path="/ino-chip-set">
+              <ChipSet />
             </Route>
           </Switch>
         </main>
