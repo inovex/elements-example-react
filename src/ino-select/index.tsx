@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import { InoSelect, InoOption } from '../shared/InovexElements';
+import { InoOption, InoSelect } from '../shared/InovexElements';
 
 export const Select: React.FC = () => {
   const [selectedValue, setSelectedValue] = React.useState('');
@@ -27,4 +26,3 @@ export const Select: React.FC = () => {
     </div>
   );
 };
-ReactDOM.render(<Select />, document.getElementById('root'));

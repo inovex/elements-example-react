@@ -1,49 +1,45 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-  useRouteMatch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import './index.scss';
 import logo from './logo.svg';
 
-import {
-  InoList,
-  InoNavItem,
-  InoNavDrawer,
-  InoIcon,
-} from './shared/InovexElements';
+import { InoList, InoListDivider, InoNavDrawer } from './shared/InovexElements';
 
 import { HomeTodoApp } from './home-todo-app';
 import { Dialog } from './ino-dialog';
 import { Select } from './ino-select';
 import { Fab } from './ino-fab';
+import { NavItemLink } from './shared/components/NavItemLink';
+import { Button } from './ino-button';
 
-const NavItemLink = ({
-  label,
-  to,
-  activeOnlyWhenExact = true,
-}: {
-  label: string;
+type CustomRoute = {
   to: string;
-  activeOnlyWhenExact?: boolean;
-}) => {
-  let match = useRouteMatch({
-    path: to,
-    exact: activeOnlyWhenExact,
-  });
-  return (
-    <Link className={'router-link'} to={to}>
-      <InoNavItem inoActivated={match ? true : false} inoText={label}>
-        {/* for now just use an empty icon to avoid jumping content issue */}
-        <InoIcon inoIcon=""></InoIcon>
-      </InoNavItem>
-    </Link>
-  );
-};
+  label: string;
+  component: any
+}
+
+const ROUTES: CustomRoute[] = [
+  {
+    to: '/ino-button',
+    label: '<InoButton>',
+    component: Button
+  },
+  {
+    to: '/ino-dialog',
+    label: '<InoDialog>',
+    component: Dialog
+  },
+  {
+    to: '/ino-fab',
+    label: '<InoFab>',
+    component: Fab
+  },
+  {
+    to: '/ino-select',
+    label: '<InoSelect>',
+    component: Select
+  }
+];
 
 const App: React.FC = () => {
   const [navOpen, setNavOpen] = React.useState(true);
@@ -58,33 +54,34 @@ const App: React.FC = () => {
         }}
       >
         <InoList slot="header">
-          <img height={'50'} alt="react-icon" src={logo} />
+          <img height={'50'} alt="react-icon" src={logo}/>
           <h2>inovex elements</h2>
           <span>React examples</span>
         </InoList>
         <InoList slot="content">
           <NavItemLink to="/home" label="TodoApp"></NavItemLink>
-          <NavItemLink to="/ino-select" label="InoSelect"></NavItemLink>
-          <NavItemLink to="/ino-dialog" label="InoDialog"></NavItemLink>
-          <NavItemLink to="/ino-fab" label="InoFab"></NavItemLink>
+          <InoListDivider/>
+          {
+            ROUTES.map(({ to, label }) => (
+                <NavItemLink key={to} to={to} label={label}/>
+              )
+            )
+          }
         </InoList>
         <main slot="app">
           <Switch>
             <Route exact path="/">
-              <Redirect to="/home" />
+              <Redirect to="/home"/>
             </Route>
             <Route path="/home">
-              <HomeTodoApp />
+              <HomeTodoApp/>
             </Route>
-            <Route path="/ino-dialog">
-              <Dialog />
-            </Route>
-            <Route path="/ino-select">
-              <Select />
-            </Route>
-            <Route path="/ino-fab">
-              <Fab />
-            </Route>
+            {
+              ROUTES.map((route) => (
+                  <Route key={route.to} path={route.to} component={route.component}/>
+                )
+              )
+            }
           </Switch>
         </main>
       </InoNavDrawer>

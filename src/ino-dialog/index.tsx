@@ -1,14 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './Dialog.scss';
 
-import {
-  InoSelect,
-  InoOption,
-  InoDialog,
-  InoButton,
-  InoIconButton,
-} from '../shared/InovexElements';
+import { InoButton, InoDialog, InoIconButton, InoOption, InoSelect } from '../shared/InovexElements';
 
 export const Dialog: React.FC = () => {
   const [selectedValue, setSelectedValue] = React.useState('');
@@ -58,5 +51,3 @@ export const Dialog: React.FC = () => {
     </div>
   );
 };
-
-ReactDOM.render(<Dialog />, document.getElementById('root'));

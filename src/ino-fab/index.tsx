@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import { InoFab } from '../shared/InovexElements';
 
@@ -10,5 +9,3 @@ export const Fab: React.FC = () => {
     </div>
   );
 };
-
-ReactDOM.render(<Fab />, document.getElementById('root'));
