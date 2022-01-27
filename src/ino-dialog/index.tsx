@@ -12,20 +12,21 @@ export const Dialog: React.FC = () => {
         Open Dialog
       </InoButton>
 
-      <InoDialog inoOpen={dialogOpen}>
+      {/* use stopPropagation to prevent toggling nav drawer */}
+      <InoDialog open={dialogOpen} onOpenChange={(e) => e.stopPropagation()}>
         <div className="ino-dialog-header" slot="header">
           <div className="ino-dialog-title">
             <h3>Dialog</h3>
             <InoIconButton
               onClick={() => setDialogOpen(false)}
-              inoIcon="close"
-            ></InoIconButton>
+              icon="close"
+            />
           </div>
         </div>
         <div className="ino-dialog-content">
           <InoSelect
             onValueChange={(event) => setSelectedValue(event.detail)}
-            inoLabel="Form select"
+            label="Form select"
             required
             value={selectedValue}
           >

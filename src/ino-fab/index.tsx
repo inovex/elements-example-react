@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { InoFab } from '../shared/InovexElements';
+import { InoFab, InoIcon } from '../shared/InovexElements';
 
 export const Fab: React.FC = () => {
   return (
     <div className="App">
-      <InoFab inoIcon="star" inoLabel="This is a fab"></InoFab>
+      <InoFab label="This is a fab">
+        <InoIcon slot="icon-leading" icon="star" />
+      </InoFab>
     </div>
   );
 };

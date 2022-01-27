@@ -8,7 +8,7 @@ export const Select: React.FC = () => {
     <div className="App">
       <InoSelect
         onValueChange={(event) => setSelectedValue(event.detail)}
-        inoLabel="Form select"
+        label="Form select"
         required
         value={selectedValue}
       >

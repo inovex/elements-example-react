@@ -46,9 +46,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <InoNavDrawer
-        inoOpen={navOpen}
-        inoAnchor="left"
-        inoVariant="docked"
+        open={navOpen}
+        anchor="left"
+        variant="docked"
         onOpenChange={(event) => {
           setNavOpen(event.detail);
         }}
@@ -59,7 +59,7 @@ const App: React.FC = () => {
           <span>React examples</span>
         </InoList>
         <InoList slot="content">
-          <NavItemLink to="/home" label="TodoApp"></NavItemLink>
+          <NavItemLink to="/home" label="TodoApp" />
           <InoListDivider/>
           {
             ROUTES.map(({ to, label }) => (
