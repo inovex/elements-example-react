@@ -1220,17 +1220,17 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@inovex.de/elements-react@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/@inovex.de/elements-react/-/elements-react-2.3.0.tgz#13bca2207cd70b26cf8febc5a94019122072ac1f"
-  integrity sha512-vGmxuTbfvH1mZAdy/3gBWnKd2PmzpsrCY/OyTyjjOP64+pKwkPvb0fKpsO0cEL60tizSjShhZneqKEWlQkmfPw==
+"@inovex.de/elements-react@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@inovex.de/elements-react/-/elements-react-5.1.0.tgz#c5c0170f85206d6548df66a4cbf2e95539a9eff2"
+  integrity sha512-/vdH4B1YmHI1VAVrISmuanaIxHNH3RjSIOBJJOHtP+iS9cTsdX7Ora3JsP2jARlAM0lgYy5cJDyT0B9JOelleA==
   dependencies:
-    "@inovex.de/elements" "^2.3.0"
+    "@inovex.de/elements" "^5.1.0"
 
-"@inovex.de/elements@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/@inovex.de/elements/-/elements-2.3.0.tgz#941b03c7cdfbf3696b462130c34c82b65274433c"
-  integrity sha512-/HQ3pjTmqtC8jHbAA6stkYyTamiHSWDk2QkqylxMBnylM8KSnDJpoC9kLZOh32laaVjXRbBfecTE5CE8F7NdMA==
+"@inovex.de/elements@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@inovex.de/elements/-/elements-5.1.0.tgz#cdb2d9f7a5303f5a3dc8a7bd0d6d8f958166d6be"
+  integrity sha512-0yECW3QoZEHWnaxvekey+X/AxfVoiP8m6jTcuj/mLMprrGfFLEll6qvFnVXvbtxSUDhAVVM5b3tjyd0gy0VXGw==
   dependencies:
     "@material/button" "^8.0.0"
     "@material/card" "^8.0.0"
@@ -1258,13 +1258,13 @@
     "@material/tab-scroller" "^8.0.0"
     "@material/textfield" "^8.0.0"
     "@material/typography" "^8.0.0"
-    "@stencil/core" "2.0.3"
+    "@stencil/core" "2.4.0"
     autosize "^4.0.2"
     classnames "^2.2.6"
     currency.js "^1.2.2"
+    date-fns "^2.16.1"
     flatpickr "^4.4.6"
     tippy.js "^6.2.3"
-    typeface-lato "^0.0.75"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -2071,10 +2071,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@stencil/core@2.0.3":
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/@stencil/core/-/core-2.0.3.tgz#8719d3131362076a35b7a7c865de4720766f3f47"
-  integrity sha512-d4qLDN7HKwJEK+ljhknD8azpM4bF49Dv7h5yG3RF+SPo8uozDq3p5ZNj1MgZoRgzh04kXNyG/MKnD8H2QN5YVw==
+"@stencil/core@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.4.0.tgz#17b45629c8986e35dcbce3f7dab7d64beede83f2"
+  integrity sha512-gU6+Yyd6O0KrCSS/O6j8KKqmRo+/Dcs2fI0+APCpbAWK+nqhwDISpdnSEfGDCLMoAC08XOZCycBRk2K1VGnEcg==
 
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   version "1.4.1"
@@ -4575,6 +4575,11 @@ data-urls@^2.0.0:
     abab "^2.0.3"
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
+
+date-fns@^2.16.1:
+  version "2.28.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.28.0.tgz#9570d656f5fc13143e50c975a3b6bbeb46cd08b2"
+  integrity sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
@@ -11955,11 +11960,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typeface-lato@^0.0.75:
-  version "0.0.75"
-  resolved "https://registry.yarnpkg.com/typeface-lato/-/typeface-lato-0.0.75.tgz#8aa11c5611dc38416837c089b265a2abd1f7dd31"
-  integrity sha512-iA5uJD4PSTyIE4BDiSOexQeXkDkiJuX4Hu3wh3saJ06EB2TvJayab1Lbbmqq2je/LQv7KCQZHZmC0k4hedd8sw==
 
 typescript@^4.0.5:
   version "4.0.5"

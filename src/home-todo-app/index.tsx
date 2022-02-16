@@ -45,9 +45,9 @@ export const HomeTodoApp: React.FC = () => {
   const todoListTemplate = () => (
     <InoList>
       {todos.map((todo) => (
-        <InoListItem key={todo} inoText={todo}>
+        <InoListItem key={todo} text={todo}>
           <InoCheckbox
-            slot="ino-leading"
+            slot="leading"
             onCheckedChange={() => doTodo(todo)}
           />
         </InoListItem>
@@ -58,9 +58,9 @@ export const HomeTodoApp: React.FC = () => {
   const doneListTemplate = () => (
     <InoList>
       {doneTodos.map((todo) => (
-        <InoListItem key={todo} inoText={todo}>
+        <InoListItem key={todo} text={todo}>
           <InoCheckbox
-            slot="ino-leading"
+            slot="leading"
             checked
             onCheckedChange={() => undoTodo(todo)}
           />
@@ -74,7 +74,7 @@ export const HomeTodoApp: React.FC = () => {
       <>
         <InoList>
           {todoListTemplate()}
-          <InoListDivider inoBetweenLists />
+          <InoListDivider betweenLists />
           {doneListTemplate()}
         </InoList>
       </>
@@ -89,13 +89,12 @@ export const HomeTodoApp: React.FC = () => {
         value={newTodoName}
         onValueChange={(value) => onValueChanged(value)}
         placeholder="What needs to be done..."
-        inoIconTrailing
         onKeyPress={(e) => e.key === 'Enter' && addTodo()}
       >
         <InoIcon
-          inoIcon={'add'}
-          slot={'ino-icon-trailing'}
-          inoClickable
+          icon={'add'}
+          slot={'icon-trailing'}
+          clickable
           onClick={() => addTodo()}
         />
       </InoInput>

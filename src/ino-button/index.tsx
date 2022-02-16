@@ -4,16 +4,14 @@ import { InoButton, InoIcon } from '../shared/InovexElements';
 export const Button = () => (
   <div className="App">
     <InoButton
-      inoColorScheme="primary"
-      inoDense={false}
-      inoFill="solid"
-      inoLoading={false}
-      inoIconLeading={true}
-      inoIconTrailing={true}
+      colorScheme="primary"
+      dense={false}
+      fill="solid"
+      loading={false}
     >
-      <InoIcon slot="ino-icon-leading" inoIcon="info"></InoIcon>
+      <InoIcon slot="icon-leading" icon="info" />
       My Button
-      <InoIcon slot="ino-icon-trailing" inoIcon="info"></InoIcon>
+      <InoIcon slot="icon-trailing" icon="info" />
     </InoButton>
   </div>
 );
