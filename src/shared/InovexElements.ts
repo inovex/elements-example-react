@@ -3,7 +3,6 @@ export {
   InoCard,
   InoCheckbox,
   InoChip,
-  InoChipSet,
   InoDatepicker,
   InoFab,
   InoFabSet,

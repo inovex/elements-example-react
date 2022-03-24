@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import './index.scss';
 import logo from './logo.svg';
 
@@ -22,22 +22,22 @@ const ROUTES: CustomRoute[] = [
   {
     to: '/ino-button',
     label: '<InoButton>',
-    component: Button
+    component: <Button />
   },
   {
     to: '/ino-dialog',
     label: '<InoDialog>',
-    component: Dialog
+    component: <Dialog />
   },
   {
     to: '/ino-fab',
     label: '<InoFab>',
-    component: Fab
+    component: <Fab />
   },
   {
     to: '/ino-select',
     label: '<InoSelect>',
-    component: Select
+    component: <Select />
   }
 ];
 
@@ -47,42 +47,37 @@ const App: React.FC = () => {
     <Router>
       <InoNavDrawer
         open={navOpen}
-        anchor="left"
-        variant="docked"
+        anchor='left'
+        variant='docked'
         onOpenChange={(event) => {
           setNavOpen(event.detail);
         }}
       >
-        <InoList slot="header">
-          <img height={'50'} alt="react-icon" src={logo}/>
+        <InoList slot='header'>
+          <img height={'50'} alt='react-icon' src={logo} />
           <h2>inovex elements</h2>
           <span>React examples</span>
         </InoList>
-        <InoList slot="content">
-          <NavItemLink to="/home" label="TodoApp" />
-          <InoListDivider/>
+        <InoList slot='content'>
+          <NavItemLink to='/' label='TodoApp' />
+          <InoListDivider />
           {
             ROUTES.map(({ to, label }) => (
-                <NavItemLink key={to} to={to} label={label}/>
+                <NavItemLink key={to} to={to} label={label} />
               )
             )
           }
         </InoList>
-        <main slot="app">
-          <Switch>
-            <Route exact path="/">
-              <Redirect to="/home"/>
-            </Route>
-            <Route path="/home">
-              <HomeTodoApp/>
-            </Route>
+        <main slot='app'>
+          <Routes>
+            <Route path='/' element={<HomeTodoApp />} />
             {
               ROUTES.map((route) => (
-                  <Route key={route.to} path={route.to} component={route.component}/>
+                  <Route key={route.to} path={route.to} element={route.component} />
                 )
               )
             }
-          </Switch>
+          </Routes>
         </main>
       </InoNavDrawer>
     </Router>

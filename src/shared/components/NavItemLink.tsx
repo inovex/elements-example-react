@@ -1,4 +1,4 @@
-import { Link, useRouteMatch } from 'react-router-dom';
+import { Link, useMatch } from 'react-router-dom';
 import { InoIcon, InoNavItem } from '../InovexElements';
 import React from 'react';
 
@@ -11,9 +11,8 @@ export const NavItemLink = ({
   to: string;
   activeOnlyWhenExact?: boolean;
 }) => {
-  let match = useRouteMatch({
+  let match = useMatch({
     path: to,
-    exact: activeOnlyWhenExact
   });
   return (
     <Link className={'router-link'} to={to}>

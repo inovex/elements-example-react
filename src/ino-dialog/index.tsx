@@ -13,7 +13,7 @@ export const Dialog: React.FC = () => {
       </InoButton>
 
       {/* use stopPropagation to prevent toggling nav drawer */}
-      <InoDialog open={dialogOpen} onOpenChange={(e) => e.stopPropagation()}>
+      <InoDialog open={dialogOpen}>
         <div className="ino-dialog-header" slot="header">
           <div className="ino-dialog-title">
             <h3>Dialog</h3>
