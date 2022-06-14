@@ -1,3 +1,6 @@
+❗ This project is deprecated has been moved to the [main repository of the inovex-elements](https://github.com/inovex/elements/tree/master/packages/elements-react-example)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 [![Edit inovex-elements](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/inovex/elements-example-react/tree/master/?fontsize=14&hidenavigation=1&theme=dark)
